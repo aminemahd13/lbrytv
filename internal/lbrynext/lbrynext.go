@@ -45,7 +45,7 @@ func experimentNewSdkParam(c *query.Caller, hctx *query.HookContext) (*jsonrpc.R
 
 			log := logger.Log().WithField("method", query.MethodResolve)
 			if err != nil {
-				log.Error("experimental call errored:", err)
+				log.Error("experimental call errored: ", err)
 				return
 			}
 			rBody, xrBody, diff := compareResponses(r, xr)
